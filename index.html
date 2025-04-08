@@ -24,6 +24,136 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Custom CSS for certifications section -->
+    <style>
+        .certification-card {
+            background-color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            border-radius: 0;
+        }
+        
+        .certification-card a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #333;
+            text-decoration: none;
+            padding: 0;
+        }
+        
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cert-name {
+            font-family: serif;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px 20px 20px;
+            color: #000;
+        }
+        
+        .cert-content {
+            padding: 0 30px 30px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .cert-content h3 {
+            margin-top: 0;
+            color: #2b2b2b;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .cert-content p {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .cert-date {
+            font-style: italic;
+            font-size: 1.4rem !important;
+            color: #888 !important;
+            margin-top: auto;
+            padding-top: 20px;
+        }
+        
+        .row.cert-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .cert-col {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 0 15px;
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .cert-col {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .cert-col {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        /* Compact timeline styling */
+        .timeline__block {
+            margin-bottom: 1.8rem;
+            position: relative;
+        }
+        
+        .timeline__bullet {
+            margin-right: 1rem;
+        }
+        
+        .timeline__header {
+            margin-bottom: 0.4rem;
+        }
+        
+        .timeline__header p {
+            margin-bottom: 0.2rem;
+            line-height: 1.1;
+        }
+        
+        .timeline__header h3, .timeline__header h5 {
+            margin-bottom: 0;
+            line-height: 1.3;
+        }
+        
+        .timeline__desc p {
+            margin-bottom: 0.4rem;
+            padding-left: 0.5rem;
+        }
+        
+        .timeline__desc p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -50,6 +180,7 @@
             <ul class="header-nav">
                 <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll"  href="#certifications" title="certifications">Certifications</a></li>
                 <li><a class="smoothscroll"  href="#works" title="works">Portfolio</a></li>
                 <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
             </ul>
@@ -76,6 +207,8 @@
                 <h1>
                     I am Vineet Shah. <br> 
                 </h1>
+
+                <h5 style="color: white;">Franklin Township, NJ | (732) 325-8560 | vineet2175@gmail.com</h5>
 
                 <div class="home-content__buttons">
                     <a href="#works" class="smoothscroll btn btn--stroke">
@@ -121,7 +254,7 @@
                 
                 <h1> Leader. Developer. Student. Programmer.</h1>
                 
-                <p class="lead"> 🎓 Soon to be grad with a Bachelor's of Science in Computer Science & Finance from Rutgers University. (May 2027) </p>
+                <p class="lead"> 🎓 Pursuing a Bachelor's of Science in Computer Science & Finance from Rutgers University. (May 2027) | GPA - 3.73/4.0 </p>
             </div>
         </div>
 
@@ -129,14 +262,16 @@
 
             <div class="col-six tab-full left">
                 <h3>Hi there!</h3>
-                <p>I am a sophomore at Rutgers University majoring in Computer Science and Finance, with a strong passion for technology, software development, and product management. My journey is driven by a continuous pursuit of learning and problem-solving, always seeking to create impactful and innovative tech solutions.</p>
-                <p>As an aspiring Software Engineer and Product Manager, I’ve worked on projects that involve UX/UI design, frontend and backend development, and AI-driven features, including my app concept '‘WellSpace',’ which integrates mental health support with habit tracking and social connection.</p>
-                <p>Outside of my professional interests, I enjoy weightlifting, traveling, going to concerts, and exploring creative outlets like videography and photography.</p>                
+                <p>I am a student at Rutgers University majoring in Computer Science and Finance, with a strong passion for technology, software development, and finance. My journey is driven by a continuous pursuit of learning and problem-solving, always seeking to create impactful and innovative tech solutions.</p>
+                <p>I have experience in UX/UI design, frontend and backend development, and have worked on various projects including quantitative finance applications, mobile apps, and web development projects.</p>
+                <p>Outside of my professional interests, I enjoy challenges, extreme sports, coffee, concerts, cooking, NBA, rap music, video editing, and weightlifting.</p>                
                 <p>My recent experiences include:</p>
-                <p><b>Moble Engineering  Intern @ ChimpVine</b></p>
-                <p><b>Software Engineerg Intern @ Headstarter AI </b></p>
-                <p><b>Branding Strategy & Business Analytics Extern @ Beats by Dre</b></p>
-                <p><b>General Manager @ Gloria Jean's Coffee</b></p>
+                <p><b>Incoming Software Engineering Intern @ Verisk</b></p>
+                <p><b>Frontend Software Engineer @ Blueprint</b></p>
+                <p><b>Quantitative Developer @ Rutgers Quantitative Finance Club</b></p>
+                <p><b>Marketing Director @ HackRU</b></p>
+                <p><b>Mobile Engineering Intern @ ChimpVine</b></p>
+                <p><b>Software Engineering Fellow @ Headstarter AI</b></p>
                 <p>I am always on the lookout for new challenges and opportunities to grow. I love meeting new people and building connections, so feel free to reach out to me!</p>
             </div>
             
@@ -144,18 +279,8 @@
                 <div class="col-six tab-full right">
                     <h3>I've Got Some Skills.</h3>
                     <ul>
-                        <li> <b>Java</b> </li>
-                        <li> <b>Javascript</b> </li>
-                        <li> <b>Node.js</b> </li>
-                        <li> <b>HTML</b> </li>
-                        <li> <b>CSS</b> </li>
-                        <li> <b>Python</b> </li>
-                        <li> <b>Kotlin</b> </li>
-                        <li> <b>Swift</b> </li>
-                        <li> <b>PHP</b> </li>
-                        <li> <b>Django</b> </li>
-
-
+                        <li> <b>Languages/Frameworks:</b> CSS, HTML, Java, JavaScript, Kotlin, Node.js, Python, Swift, SQL, React, Linux </li>
+                        <li> <b>Tools:</b> Microsoft Excel, Tableau, Figma, VS Code, Adobe Photoshop & Illustrator, Xcode, Android Studio, Sony Vegas Pro </li>
                     </ul>
                     
                     
@@ -181,7 +306,7 @@
         <div class="row about-content about-content--buttons">
 
             <div class="col-six tab-full left">
-                <a href="https://drive.google.com/drive/u/2/folders/1i6ySnl3mIxOm01Wv6kUcSUDvhXe9-77E" class="btn btn--primary full-width">View My Resume</a>
+                <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" class="btn btn--primary full-width">Download My Resume</a>
             </div>
             
 
@@ -199,59 +324,83 @@
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
-                            <p class="timeline__timeframe">January 2024 - Current</p>
-                            <h3>Headstarter AI</h3>
-                            <h5>Software Engineering AI</h5>
+                            <p class="timeline__timeframe">June 2025</p>
+                            <h3>Verisk</h3>
+                            <h5>Incoming Software Engineering Intern</h5>
                         </div>
                         <div class="timeline__desc">
+                            <p>• Incoming Software Engineering Intern at Verisk in Jersey City, NJ.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">March 2023 - Present</p>
+                            <h3>Blueprint</h3>
+                            <h5>Frontend Software Engineer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>• Developed dynamic web applications using React, TypeScript, JavaScript, HTML, and CSS, consistently focusing on creating responsive, interactive user interfaces while adhering to best practices in component architecture and efficient state management techniques.</p>
+                            <p>• Leading group projects to build Single Page Applications (SPAs) by actively applying advanced state management, React Hooks (useState, useEffect), and complex routing techniques with React Router, ensuring scalability and maintaining clean, efficient code practices with Git.</p>
+                            <p>• Collaborating with team members to deploy robust web applications on Vercel, while actively exploring frameworks such as Electron, Tauri, and React Native for practical development, with a dedicated focus on delivering high-performance, cross-platform software solutions.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">October 2023 - Present</p>
+                            <h3>Rutgers Quantitative Finance Club</h3>
+                            <h5>Quantitative Developer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>• Collaborating with a team of finance enthusiasts to analyze market trends, develop trading strategies, and implement quantitative models using Python and financial APIs.</p>
+                            <p>• Participating in weekly workshops focused on algorithmic trading, financial modeling, and data analysis techniques to enhance investment decision-making processes.</p>
+                            <p>• Engaging in mock trading competitions and research projects that apply statistical methods and machine learning to financial markets, deepening practical understanding of quantitative finance principles.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+            
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">January 2024 - Present</p>
+                            <h3>HackRU</h3>
+                            <h5>Marketing Director</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>• Worked with a team of 7 members in executing social media, on-campus outreach, and email marketing campaigns that reached over 2,500 Rutgers students, while actively collaborating with the design team to create promotional flyers and videos.</p>
+                            <p>• Applied advanced analytics to assess outreach performance, leveraging data-driven insights to refine marketing strategies and campaigns, resulting in a 20% improvement in outreach effectiveness and overall engagement with the student body.</p>
+                            <p>• Partnered with over 10 professors and faculty members from the Computer Science department at Rutgers University and established connections with more than 5 hackathons to explore strategic partnerships and enhance collaborative opportunities.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+            
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">December 2023 - May 2024</p>
+                            <h3>ChimpVine</h3>
+                            <h5>Mobile Engineering Intern</h5>
+                        </div>
+                        <div class="timeline__desc">    
+                            <p>• Collaborated closely with mobile development teams to identify and resolve over 255 technical issues, significantly improving mobile app functionality and enhancing user experience through comprehensive and detailed simulations of user interaction and design flows.</p>
+                            <p>• Contributed to testing and prototyping a mobile application, working closely with senior developers to gather user feedback, prioritize feature enhancements, and ensure smooth functionality across devices and platforms, improving user satisfaction.</p>
+                            <p>• Assisted in the development and implementation of mobile app features, utilizing performance monitoring tools and debugging techniques to identify and address performance bottlenecks, contributing to improved app efficiency and responsiveness.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2024 - September 2024</p>
+                            <h3>Headstarter AI</h3>
+                            <h5>Software Engineering Fellow</h5>
+                        </div>
+                        <div class="timeline__desc">    
                             <p>• Led a team of four in agile project management, overseeing the full software development lifecycle from initial concept design to final deployment, ensuring timely delivery, strict adherence to project scope, and maintaining high-quality standards.</p>
                             <p>• Developed responsive and interactive web applications using JavaScript, HTML, and CSS, integrating advanced AI-driven features with OpenAI to significantly enhance natural language processing capabilities and overall user experience.</p>
                         </div>
                     </div> <!-- end timeline__block -->
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">January 2024 - Current</p>
-                            <h3>Beats by Dre</h3>
-                            <h5>Branding Strategy & Business Analytics Extern</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>• Currently leading a comprehensive research project on the resurgence of over-the-ear headphones among Gen Z consumers, identifying key market trends and strategic brand positioning.</p>
-                            <p>• Utilizing advanced analytics tools to dissect complex datasets, providing actionable insights that guide strategic recommendations for product development and marketing initiatives.</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
-            
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">December 2023 - Current</p>
-                            <h3>ChimpVine</h3>
-                            <h5>Mobile Engineering Intern</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>• Collaborated closely with mobile development teams to identify and resolve over 255 technical issues, significantly improving mobile app functionality and enhancing user experience through comprehensive and detailed simulation of user interaction flows.</p>
-                            <p>• Contributed to testing and prototyping a mobile application, working closely with senior developers to gather user feedback, prioritize feature enhancements, and ensure smooth functionality across devices and platforms, improving user satisfaction.</p>
-                            <p>• Assisted in the development and implementation of mobile app features, utilizing performance monitoring tools and debugging techniques to identify and address performance bottlenecks, contributing to improved app efficiency and responsiveness.</p>
-
-                        </div>
-                    </div> <!-- end timeline__block -->
-            
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">September 2022 - August 2024</p>
-                            <h3>Gloria Jean's Coffee</h3>
-                            <h5>General Manager</h5>
-                        </div>
-                        <div class="timeline__desc">    
-                            <p>• Cultivated and maintained strong customer relationships through personalized engagement strategies, including targeted promotions, enhancing service delivery, and increasing customer satisfaction and retention in a competitive market</p>
-                            <p>• Executed and negotiated strategic business deals with key partners, including JCPenney and Bagel Market, which expanded our market presence and directly contributed to over $300,000 in annual net profits, driving sustained financial growth </p>
-                            <p>• Coordinated closely with executive members and the CEO of Gloria Jean’s to develop comprehensive data-driven marketing and business strategies, while improving overall efficiency to drive business growth at the franchise level</p>
-                            </p>
-
-                        </div>
-                    </div> <!-- end timeline__block -->
-            
                 </div>
             </div>
             
@@ -263,6 +412,77 @@
 
     </section> <!-- end about -->
     
+    <!-- certifications
+    ================================================== -->
+    <section id="certifications" class="s-about target-section">
+        
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h3>Professional Development</h3>
+                <h1>Certifications & Credentials</h1>
+                <p class="lead">Continuous learning and skill development through industry-recognized certifications.</p>
+            </div>
+        </div>
+
+        <div class="row cert-row">
+            <!-- Bloomberg Market Concepts Certificate -->
+            <div class="cert-col">
+                <div class="certification-card">
+                    <a href="https://portal.bloombergforeducation.com/certificates/fKXPMq4rkrbWgLED5Eq4h6Ea" target="_blank">
+                        <div class="cert-name">vineet</div>
+                        <div class="cert-content">
+                            <h3>Bloomberg Market Concepts</h3>
+                            <p>Comprehensive understanding of financial markets, economic principles, and Bloomberg Terminal functionality.</p>
+                            <p class="cert-date">2023</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- LinkedIn Excel Certificate -->
+            <div class="cert-col">
+                <div class="certification-card">
+                    <a href="https://www.linkedin.com/learning/certificates/5258ce597bc4dcf85d793475f1ecb81c1dded7ee5d42f154307dc2d7e61ed83f" target="_blank">
+                        <div class="cert-name">vineet</div>
+                        <div class="cert-content">
+                            <h3>Excel Essential Training</h3>
+                            <p>Advanced data management and analysis techniques with Microsoft Excel (Microsoft 365).</p>
+                            <p class="cert-date">November 2023</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- KPMG Certificate -->
+            <div class="cert-col">
+                <div class="certification-card">
+                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/KPMG%20AU/m7W4GMqeT3bh9Nb2c_KPMG%20AU_pTxa4eRQmrWQ8wMHt_1698708254872_completion_certificate.pdf" target="_blank">
+                        <div class="cert-name">vineet</div>
+                        <div class="cert-content">
+                            <h3>KPMG Data Analytics Intern Virtual Experience</h3>
+                            <p>Data quality assessment, cleaning, analysis, and visualization techniques in a professional consulting environment.</p>
+                            <p class="cert-date">October 2023</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Lyft Certificate -->
+            <div class="cert-col">
+                <div class="certification-card">
+                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Lyft/xSw9echtixLAoPdsH_Lyft_pTxa4eRQmrWQ8wMHt_1698769498950_completion_certificate.pdf" target="_blank">
+                        <div class="cert-name">vineet</div>
+                        <div class="cert-content">
+                            <h3>Lyft Back-End Engineering Virtual Experience</h3>
+                            <p>Software engineering best practices, API development, and system design principles for transportation solutions.</p>
+                            <p class="cert-date">October 2023</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section> <!-- end certifications -->
 
     <!-- works
     ================================================== -->
@@ -293,10 +513,10 @@
 
                         <div class="item-folio__text">
                             <h3 class="item-folio__title">
-                                Connections
+                                AI Connections
                             </h3>
                             <p class="item-folio__cat">
-                                intuition
+                                AI Application
                             </p>
                         </div>
 
@@ -305,7 +525,8 @@
                         </a>
 
                         <div class="item-folio__caption">
-                            <p> .</p>
+                            <p>• Developed an innovative application that leverages artificial intelligence to generate new connection topics, enhancing user engagement and creativity.</p>
+                            <p>• Created an intuitive interface for exploring AI-generated connections, providing users with a seamless experience for discovering new ideas and relationships.</p>
                         </div>
 
                     </div> <!-- end item-folio -->
@@ -329,7 +550,7 @@
                                 RU OnTrack
                             </h3>
                             <p class="item-folio__cat">
-                                innovation
+                                Schedule Planning App
                             </p>
                         </div>
 
@@ -338,7 +559,8 @@
                         </a>
 
                         <div class="item-folio__caption">
-                            <p>check out this project on Github!</p>
+                            <p>• Developed a comprehensive schedule planning application designed specifically for Rutgers University students, helping them efficiently organize their academic and extracurricular activities.</p>
+                            <p>• Implemented user-friendly interfaces and intuitive navigation to streamline the scheduling process, enhancing the overall student experience and productivity.</p>
                         </div>
 
                     </div> <!-- end item-folio -->
@@ -357,10 +579,10 @@
 
                         <div class="item-folio__text">
                             <h3 class="item-folio__title">
-                                Lyft Backend-Engineering
+                                Lyft Back-End Engineering Job Simulation
                             </h3>
                             <p class="item-folio__cat">
-                                integration
+                                Software Engineering
                             </p>
                         </div>
 
@@ -369,7 +591,8 @@
                         </a>
 
                         <span class="item-folio__caption">
-                            <p>.</p>
+                            <p>• Completed a comprehensive back-end engineering job simulation for Lyft, demonstrating proficiency in building robust server-side applications and APIs.</p>
+                            <p>• Applied software engineering best practices including efficient algorithms, data structures, and system design principles to solve complex transportation-related challenges.</p>
                         </span>
 
                     </div> <!-- end item-folio -->
@@ -390,10 +613,10 @@
 
                         <div class="item-folio__text">
                             <h3 class="item-folio__title">
-                                RU Eats
+                                RU Eats: Campus Dining Companion
                             </h3>
                             <p class="item-folio__cat">
-                                infusion
+                                Mobile App Development
                             </p>
                         </div>
 
@@ -402,7 +625,40 @@
                         </a>
 
                         <span class="item-folio__caption">
-                            <p>.</p>
+                            <p>• Developed a mobile app using Xcode and Swift, focusing on frontend development to deliver real-time dining hall info, menu options, and nutritional details, enhancing the student experience by streamlining meal planning and offering dietary insights.</p>
+                            <p>• Collaborated with a backend engineering team to integrate Django, improving data workflows and ensuring seamless front-end and back-end communication, enhancing application performance, user experience, load times, and overall user satisfaction.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="https://github.com/vineetshub" data-size="1050x700">
+                                <img src="images/portfolio/blockhouse.jpeg"
+                                     srcset="images/portfolio/blockhouse.jpeg 1x, images/portfolio/blockhouse.jpeg 2x" alt=""width="500" height="400">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Blockhouse Backtesting Model
+                            </h3>
+                            <p class="item-folio__cat">
+                                Quantitative Finance
+                            </p>
+                        </div>
+
+                        <a href="https://github.com/vineetshub" class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+                        <span class="item-folio__caption">
+                            <p>• Designed and developed a sophisticated backtesting model for evaluating trading strategies, incorporating historical market data analysis and performance metrics to provide comprehensive insights into strategy viability.</p>
+                            <p>• Implemented advanced financial modeling techniques and statistical analysis to optimize trading parameters, assess risk factors, and generate detailed performance reports for informed decision-making in quantitative trading.</p>
                         </span>
 
                     </div> <!-- end item-folio -->
