@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 700" font-family="Montserrat, Arial, sans-serif">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06231f"/><stop offset="1" stop-color="#04120f"/></linearGradient></defs>
+  <rect width="1050" height="700" fill="url(#g)"/>
+  <g transform="translate(700,140)" stroke-width="5" opacity="0.92">
+    <line x1="30" y1="40" x2="30" y2="300" stroke="#34d399"/><rect x="12" y="90" width="36" height="120" fill="#34d399"/>
+    <line x1="110" y1="20" x2="110" y2="260" stroke="#f87171"/><rect x="92" y="60" width="36" height="120" fill="#f87171"/>
+    <line x1="190" y1="60" x2="190" y2="320" stroke="#34d399"/><rect x="172" y="120" width="36" height="150" fill="#34d399"/>
+    <line x1="270" y1="30" x2="270" y2="250" stroke="#34d399"/><rect x="252" y="70" width="36" height="110" fill="#34d399"/>
+  </g>
+  <text x="80" y="330" fill="#7fdcb4" font-size="28" letter-spacing="6">QUANTITATIVE FINANCE</text>
+  <text x="76" y="420" fill="#f3f5f9" font-size="86" font-weight="900" letter-spacing="-3">Blockhouse</text>
+  <text x="80" y="490" fill="#6b7688" font-size="30">Backtesting trading strategies</text>
+</svg>

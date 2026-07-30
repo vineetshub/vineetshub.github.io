@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 700" font-family="Montserrat, Arial, sans-serif">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#241a3a"/><stop offset="1" stop-color="#0c0a18"/></linearGradient></defs>
+  <rect width="1050" height="700" fill="url(#g)"/>
+  <g transform="translate(768,90) scale(0.78)">
+    <g fill="#8b7cf6" opacity="0.92">
+      <rect x="0" y="0" width="80" height="80" rx="12"/><rect x="95" y="0" width="80" height="80" rx="12" fill="#a99bff"/><rect x="190" y="0" width="80" height="80" rx="12"/><rect x="285" y="0" width="80" height="80" rx="12" fill="#6f5fe0"/>
+      <rect x="0" y="95" width="80" height="80" rx="12" fill="#a99bff"/><rect x="95" y="95" width="80" height="80" rx="12"/><rect x="190" y="95" width="80" height="80" rx="12" fill="#6f5fe0"/><rect x="285" y="95" width="80" height="80" rx="12"/>
+    </g>
+  </g>
+  <text x="80" y="360" fill="#a99bff" font-size="28" letter-spacing="6">AI APPLICATION</text>
+  <text x="76" y="450" fill="#f3f5f9" font-size="88" font-weight="900" letter-spacing="-3">Connections</text>
+  <text x="80" y="515" fill="#6b7688" font-size="30">AI-generated word association puzzles</text>
+</svg>

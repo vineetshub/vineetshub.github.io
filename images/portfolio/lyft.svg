@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 700" font-family="Montserrat, Arial, sans-serif">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a0a24"/><stop offset="1" stop-color="#120612"/></linearGradient></defs>
+  <rect width="1050" height="700" fill="url(#g)"/>
+  <g transform="translate(770,85)" fill="none" stroke="#ff2fb0" stroke-width="6" opacity="0.9">
+    <rect x="0" y="0" width="230" height="58" rx="10"/>
+    <rect x="0" y="78" width="230" height="58" rx="10"/>
+    <rect x="0" y="156" width="230" height="58" rx="10"/>
+  </g>
+  <g transform="translate(770,85)" fill="#ff2fb0" opacity="0.85">
+    <circle cx="34" cy="29" r="9"/><circle cx="34" cy="107" r="9"/><circle cx="34" cy="185" r="9"/>
+  </g>
+  <text x="80" y="360" fill="#ff7ad0" font-size="26" letter-spacing="5">BACKEND ENGINEERING · SIMULATION</text>
+  <text x="76" y="450" fill="#f3f5f9" font-size="84" font-weight="900" letter-spacing="-3">Lyft Backend</text>
+  <text x="80" y="515" fill="#6b7688" font-size="30">APIs, data structures, system design</text>
+</svg>

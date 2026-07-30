@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 700" font-family="Montserrat, Arial, sans-serif">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a0a12"/><stop offset="1" stop-color="#120608"/></linearGradient></defs>
+  <rect width="1050" height="700" fill="url(#g)"/>
+  <g transform="translate(690,140)" opacity="0.95">
+    <rect x="0" y="0" width="300" height="60" rx="10" fill="#cc0033"/>
+    <rect x="0" y="80" width="140" height="120" rx="10" fill="#e23b5a" opacity="0.85"/>
+    <rect x="160" y="80" width="140" height="80" rx="10" fill="#cc0033" opacity="0.7"/>
+    <rect x="0" y="220" width="90" height="90" rx="10" fill="#cc0033" opacity="0.55"/>
+    <rect x="110" y="220" width="190" height="90" rx="10" fill="#e23b5a" opacity="0.8"/>
+  </g>
+  <text x="80" y="330" fill="#f07089" font-size="28" letter-spacing="6">SCHEDULE PLANNING APP</text>
+  <text x="76" y="420" fill="#f3f5f9" font-size="96" font-weight="900" letter-spacing="-3">RU OnTrack</text>
+  <text x="80" y="490" fill="#6b7688" font-size="30">Plan your Rutgers semester, on track</text>
+</svg>

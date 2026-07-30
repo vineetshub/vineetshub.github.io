@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Enhancement layer: scroll reveals, marquee, hover motion, custom cursor.
+   Loaded after main.css so it can layer on top of the base template.
+   ========================================================================== */
+
+/* --- scroll reveal --- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); will-change: opacity, transform; }
+.reveal.is-in { opacity: 1; transform: none; }
+
+/* --- hero entrance --- */
+.home-content__main > * { opacity: 0; transform: translateY(30px); animation: heroIn .9s cubic-bezier(.2,.7,.2,1) forwards; }
+.home-content__main > h3            { animation-delay: .15s; }
+.home-content__main > h1            { animation-delay: .30s; }
+.home-content__main > h5            { animation-delay: .45s; }
+.home-content__main > .home-content__buttons { animation-delay: .60s; }
+.home-content__main > .home-content__scroll   { animation-delay: .80s; }
+@keyframes heroIn { to { opacity: 1; transform: none; } }
+
+/* --- marquee strip --- */
+.marquee { position: relative; overflow: hidden; padding: 26px 0; margin: 10px 0 40px;
+  border-top: 1px solid rgba(255,255,255,.10); border-bottom: 1px solid rgba(255,255,255,.10);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+.marquee__track { display: inline-flex; white-space: nowrap; will-change: transform; animation: marquee 26s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee span { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: clamp(28px, 5vw, 60px);
+  letter-spacing: -1px; padding: 0 26px; color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.55); }
+.marquee span.fill { color: #E31B23; -webkit-text-stroke: 0; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* --- portfolio hover motion --- */
+.item-folio__thumb { overflow: hidden; border-radius: 6px; }
+.item-folio__thumb img { transition: transform .7s cubic-bezier(.2,.7,.2,1); display: block; width: 100%; }
+.item-folio:hover .item-folio__thumb img { transform: scale(1.06); }
+.item-folio { transition: transform .4s cubic-bezier(.2,.7,.2,1); }
+.item-folio:hover { transform: translateY(-6px); }
+
+/* --- animated count-up styling --- */
+.stats__count { transition: color .3s; }
+
+/* --- custom cursor (fine pointers only) --- */
+.cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; border-radius: 50%; pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%); mix-blend-mode: difference; }
+.cursor-dot { width: 8px; height: 8px; background: #fff; }
+.cursor-ring { width: 40px; height: 40px; border: 1.5px solid rgba(255,255,255,.7); transition: width .25s, height .25s, background .25s, border-color .25s; }
+.cursor-ring.grow { width: 66px; height: 66px; background: rgba(255,255,255,.12); border-color: transparent; }
+@media (hover: none), (pointer: coarse) { .cursor-dot, .cursor-ring { display: none !important; } }
+
+/* --- back-to-top / end note --- */
+.end-note { text-align: center; padding: 30px 0 0; color: rgba(255,255,255,.5); font-size: 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .home-content__main > *, .item-folio__thumb img, .item-folio { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+  .marquee__track { animation: none !important; }
+}
