@@ -8,7 +8,7 @@
     if (!reduce && "IntersectionObserver" in window) {
       var groups = [
         ".section-intro", ".about-content", ".timeline__block",
-        ".cert-col", ".masonry__brick", ".stats__col", ".testimonials-header"
+        ".cert-col", ".sw-item", ".stats__col"
       ];
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
@@ -52,8 +52,8 @@
 
     /* ---- "Select Works" marquee above the portfolio ---- */
     var works = document.getElementById("works");
-    var wrap = works && works.querySelector(".masonry-wrap");
-    if (wrap) {
+    var list = works && (works.querySelector(".selectworks") || works.querySelector(".masonry-wrap"));
+    if (list) {
       var words = ["Select Works", "Latest Projects", "Built by Vineet"];
       var unit = "";
       for (var k = 0; k < 6; k++) {
@@ -63,7 +63,7 @@
       var m = document.createElement("div");
       m.className = "marquee";
       m.innerHTML = '<div class="marquee__track">' + unit + unit + '</div>';
-      wrap.parentNode.insertBefore(m, wrap);
+      var anchor = list.closest(".row") || list; anchor.parentNode.insertBefore(m, anchor);
     }
 
     /* ---- custom cursor ---- */
