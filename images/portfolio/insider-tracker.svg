@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 700" font-family="Montserrat, Arial, sans-serif">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1436"/><stop offset="1" stop-color="#0a0a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1050" height="700" fill="url(#g)"/>
+  <g opacity="0.9">
+    <rect x="80" y="470" width="70" height="150" fill="#8b7cf6"/>
+    <rect x="180" y="410" width="70" height="210" fill="#8b7cf6"/>
+    <rect x="280" y="440" width="70" height="180" fill="#6f5fe0"/>
+    <rect x="380" y="360" width="70" height="260" fill="#8b7cf6"/>
+    <rect x="480" y="300" width="70" height="320" fill="#a99bff"/>
+  </g>
+  <text x="80" y="230" fill="#a99bff" font-size="28" letter-spacing="5">DATA ENGINEERING · PYTHON</text>
+  <text x="76" y="310" fill="#f3f5f9" font-size="64" font-weight="900" letter-spacing="-2">Insider Trading</text>
+  <text x="80" y="388" fill="#f3f5f9" font-size="64" font-weight="900" letter-spacing="-2">Pipeline Tracker</text>
+</svg>

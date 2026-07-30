@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Ringer — the sports imposter party game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="dot"></span> Ringer
+      </div>
+      <button id="settingsBtn" class="ghost" title="AI settings">AI</button>
+    </header>
+
+    <!-- SETUP -->
+    <section id="screen-setup" class="screen active">
+      <div class="hero">
+        <h1>One of you is the <span class="mark">Ringer</span>.</h1>
+        <p class="sub">Everyone gets the same secret player — except the ringer, who's faking it.
+           Drop clues, sniff out the faker, don't blow your cover.</p>
+      </div>
+
+      <div class="card">
+        <label class="field-label">Players</label>
+        <div id="playerList" class="player-list"></div>
+        <div class="row">
+          <input id="newPlayer" type="text" placeholder="Add a name…" maxlength="20" autocomplete="off" />
+          <button id="addPlayer" class="primary small">Add</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <label class="field-label">Category</label>
+        <select id="packSelect"></select>
+        <div class="row spread">
+          <button id="aiPackBtn" class="ghost small">✨ Generate a category with AI</button>
+        </div>
+        <div id="packPreview" class="preview"></div>
+      </div>
+
+      <div class="card compact">
+        <div class="stepper">
+          <span class="field-label">Ringers</span>
+          <div class="stepper-controls">
+            <button id="impMinus" class="round">−</button>
+            <strong id="impCount">1</strong>
+            <button id="impPlus" class="round">+</button>
+          </div>
+        </div>
+        <div class="stepper">
+          <span class="field-label">Discussion timer</span>
+          <div class="stepper-controls">
+            <button id="timeMinus" class="round">−</button>
+            <strong id="timeVal">2:00</strong>
+            <button id="timePlus" class="round">+</button>
+          </div>
+        </div>
+        <div class="stepper">
+          <span class="field-label">Ringer hint
+            <span class="tip">a loose shortlist — helps a little, never a giveaway</span>
+          </span>
+          <button id="hintToggle" class="toggle" role="switch" aria-checked="false">
+            <span class="knob"></span>
+          </button>
+        </div>
+      </div>
+
+      <button id="startBtn" class="primary big">Deal the round</button>
+      <p id="setupError" class="error"></p>
+    </section>
+
+    <!-- REVEAL (pass and play) -->
+    <section id="screen-reveal" class="screen">
+      <div class="reveal-wrap">
+        <p class="pass-note">Pass the phone to <strong id="revealName">—</strong></p>
+        <div id="revealCard" class="reveal-card hidden-role">
+          <div class="face front">
+            <span class="tap">Tap to see your role</span>
+          </div>
+          <div class="face back" id="revealBack"></div>
+        </div>
+        <button id="revealNext" class="primary big">Got it — next player</button>
+      </div>
+    </section>
+
+    <!-- DISCUSSION -->
+    <section id="screen-play" class="screen">
+      <div class="timer-wrap">
+        <div id="timer" class="timer">2:00</div>
+        <p class="sub center">Go around the circle. Each player says one word or clue about the
+          secret player. The ringer bluffs. Talk it out, then vote out loud — no phones.</p>
+      </div>
+      <div class="clue-order" id="clueOrder"></div>
+      <div class="play-controls">
+        <button id="pauseBtn" class="ghost">Pause</button>
+        <button id="revealBtn" class="primary big">Reveal the answer</button>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="screen-result" class="screen">
+      <div id="resultBanner" class="banner"></div>
+      <div id="resultBody" class="result-body"></div>
+      <div class="play-controls">
+        <button id="nextRoundBtn" class="primary big">Next round</button>
+        <button id="endGameBtn" class="ghost">Back to setup</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- AI settings modal -->
+  <div id="modal" class="modal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>AI settings</h3>
+        <button id="closeModal" class="ghost small">✕</button>
+      </div>
+      <p class="sub">Optional. Add a key to generate fresh categories on the fly.
+        Everything is stored only in this browser and calls the provider directly.</p>
+
+      <label class="field-label">Provider</label>
+      <select id="aiProvider">
+        <option value="openai">OpenAI</option>
+        <option value="anthropic">Anthropic</option>
+        <option value="ollama">Ollama (local)</option>
+      </select>
+
+      <label class="field-label">Model</label>
+      <input id="aiModel" type="text" placeholder="gpt-4o-mini" />
+
+      <div id="keyRow">
+        <label class="field-label">API key</label>
+        <input id="aiKey" type="password" placeholder="sk-…" autocomplete="off" />
+      </div>
+
+      <div id="ollamaRow" class="hidden">
+        <label class="field-label">Ollama URL</label>
+        <input id="aiUrl" type="text" placeholder="http://localhost:11434" />
+      </div>
+
+      <button id="saveAi" class="primary">Save</button>
+      <p id="aiStatus" class="hint"></p>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

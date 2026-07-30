@@ -1,0 +1,11 @@
+{
+  "name": "ringer",
+  "version": "1.0.0",
+  "description": "A pass-and-play sports imposter party game.",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "npx serve ."
+  },
+  "keywords": ["game", "party-game", "social-deduction", "sports", "nba", "nfl"],
+  "license": "MIT"
+}

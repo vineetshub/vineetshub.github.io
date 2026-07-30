@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 700" font-family="Montserrat, Arial, sans-serif">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2027"/><stop offset="1" stop-color="#0a1a12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1050" height="700" fill="url(#g)"/>
+  <polyline points="80,520 210,470 340,500 470,380 600,410 730,270 860,300 970,180"
+    fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <g fill="#34d399" opacity="0.85">
+    <circle cx="210" cy="470" r="7"/><circle cx="470" cy="380" r="7"/><circle cx="730" cy="270" r="7"/><circle cx="970" cy="180" r="7"/>
+  </g>
+  <text x="80" y="240" fill="#7fdcb4" font-size="28" letter-spacing="5">QUANTITATIVE FINANCE · ML</text>
+  <text x="76" y="320" fill="#f3f5f9" font-size="66" font-weight="900" letter-spacing="-2">Stock Prediction</text>
+  <text x="80" y="400" fill="#f3f5f9" font-size="66" font-weight="900" letter-spacing="-2">&amp; Backtesting</text>
+</svg>
