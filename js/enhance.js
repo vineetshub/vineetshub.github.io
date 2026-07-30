@@ -33,14 +33,16 @@
         entries.forEach(function (e) {
           if (!e.isIntersecting) return;
           countIO.unobserve(e.target);
-          var el = e.target, target = parseInt((el.textContent || "").replace(/[^0-9]/g, ""), 10);
-          if (!target || reduce) { return; }
-          var dur = 1500, start = null;
+          var el = e.target, suffix = el.getAttribute("data-suffix") || "";
+          var target = parseInt((el.textContent || "").replace(/[^0-9]/g, ""), 10);
+          if (!target) { return; }
+          if (reduce) { el.textContent = target.toLocaleString() + suffix; return; }
+          var dur = 1600, start = null;
           (function step(ts) {
             if (!start) start = ts;
             var p = Math.min((ts - start) / dur, 1);
             var eased = 1 - Math.pow(1 - p, 3);
-            el.textContent = Math.round(target * eased).toLocaleString();
+            el.textContent = Math.round(target * eased).toLocaleString() + (p >= 1 ? suffix : "");
             if (p < 1) requestAnimationFrame(step);
           })(performance.now ? performance.now() : Date.now());
         });
